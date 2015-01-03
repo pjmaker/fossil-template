@@ -31,12 +31,14 @@ Template: talk
 
 And ``make rm`` removes projects and archives.
 
-TODO:
+## TODO:
 
 1. Perhaps add an archive command to archive both the working
 directory and FOSSIL archive away. 
 1. Perhaps a one liner summary so they its easy to find the battery
-energy storage talk from Alaska.Maybe use ``ptxt``.
+energy storage talk from Alaska.Maybe use ``ptx``.
+1. Maybe add in some more templates from the real collection.
+
 
 
  
