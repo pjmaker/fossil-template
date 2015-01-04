@@ -31,13 +31,20 @@ Template: talk
 
 And ``make rm`` removes projects and archives.
 
-## TODO:
+### TODO in order to be bigger than Ben Hur
 
 1. Perhaps add an archive command to archive both the working
 directory and FOSSIL archive away. 
 1. Perhaps a one liner summary so they its easy to find the battery
 energy storage talk from Alaska.Maybe use ``ptx``.
 1. Maybe add in some more templates from the real collection.
+1. Add a project naming convention checker
+1. Add a searcher/index running across both the oneliner and the
+project README*
+1. Add a per keyword view of the dataset, i.e. a directory that 
+in turn symlinks to a subset of the data.
+1. Finally develop this as a startup company version of TRIM which
+is an outrageously complicated bit of work.
 
 
 
