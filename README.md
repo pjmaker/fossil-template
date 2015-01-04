@@ -45,7 +45,8 @@ project README*
 1. Add a per keyword view of the dataset, i.e. a directory that 
 in turn symlinks to a subset of the data.
 1. Finally develop this as a startup company version of TRIM which
-is an outrageously complicated bit of work.
+is an outrageously complicated bit of work (TRIM i.e.)
+1. Add in a glimpseindex (in the Makefile currently)
 
 
 
