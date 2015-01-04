@@ -16,7 +16,8 @@ contains:
 1. ``FOSSIL`` - directory with all the <project>.fossil archives.
 1. ``TEMPLATES`` - directory containing templates,
 e.g. ``TEMPLATES/talk`` is a template for a generic talk in Beamer.
-1. ``PROJECTS`` - various shell scripts supporting the show.
+1. ``PROJECTS`` - various shell scripts supporting the show.along
+with a list of words not to index in ``INDEX-STOPLIST``.
 1. ``Makefile`` - finally a make file to drive it.
 
 Then to build a project:
@@ -26,20 +27,20 @@ Then to build a project:
 Project name: swiss-knife
 Possible Templates: talk reportiee paper gnuprog
 Template: talk
+One liner swiss-knife - a small knife not comparable to a MORA
 % cd swiss-knife
 ```
 
 And ``make rm`` removes projects and archives.
 
+At the end you will have an ``INDEX`` of the pr
 ### TODO in order to be bigger than Ben Hur
 
 1. Perhaps add an archive command to archive both the working
 directory and FOSSIL archive away. 
-1. Perhaps a one liner summary so they its easy to find the battery
-energy storage talk from Alaska.Maybe use ``ptx``.
 1. Maybe add in some more templates from the real collection.
 1. Add a project naming convention checker
-1. Add a searcher/index running across both the oneliner and the
+1. Add a searcher/index running across both the ONELINER and the
 project README*
 1. Add a per keyword view of the dataset, i.e. a directory that 
 in turn symlinks to a subset of the data.

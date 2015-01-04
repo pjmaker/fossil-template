@@ -8,7 +8,7 @@ all:
 
 # fossil targets
 
-.PHONY: new
+.PHONY: new rm ptx
 
 # make a new project and fossil archive
 new:
@@ -18,6 +18,12 @@ new:
 rm:
 	PROJECTS/projects-rm.sh
 
+# ptx - generate the complete keyword in context list
+#  from the ONELINER file in each project. 
+ptx:
+	find . -name ONELINER -exec cat {} \; | \
+	ptx --ignore-file=PROJECTS/INDEX-STOPLIST \
+	   --ignore-case --width=80 
 
 
 
