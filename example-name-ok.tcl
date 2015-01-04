@@ -10,7 +10,7 @@
 
 set split {-}
 set match {
-  {P90}
+  {P90 P91}
   {WP[0-9]+}
   {FS CD TP TUT}
 }
@@ -27,7 +27,7 @@ set i 0
 foreach f $::options(-match) { 
   set ok 0
   foreach pat [lindex $::options(-match) $i] {
-    if {[regexp $pat [lindex $parts $i]]} { 
+    if {[regexp -exact "^$pat\$" [lindex $parts $i]]} { 
       set ok 1
       break
     }
