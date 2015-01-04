@@ -23,7 +23,19 @@ rm:
 ptx:
 	find . -name ONELINER -exec cat {} \; | \
 	ptx --ignore-file=PROJECTS/INDEX-STOPLIST \
-	   --ignore-case --width=80 
+	   --ignore-case --width=80 >INDEX
+
+# glimpseindex across the entire system - the current
+#   just indexes the whole directory. You can do individual
+#   updates as well buts its probably best to run this
+#   in cron on the server every night.man
+#
+# search with glimpse -H. pattern
+# 
+
+
+glimpse-index-all:
+	glimpseindex -B -t -f -H . -M 128 .
 
 
 
