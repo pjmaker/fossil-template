@@ -8,7 +8,7 @@ all:
 
 # fossil targets
 
-.PHONY: new rm ptx
+.PHONY: new rm ptx views
 
 # make a new project and fossil archive
 new:
@@ -24,6 +24,10 @@ ptx:
 	find . -name ONELINER -o -name KEYWORDS -exec cat {} \; | \
 	ptx --ignore-file=PROJECTS/INDEX-STOPLIST \
 	   --ignore-case --width=80 >INDEX
+
+# keyword views are just a file index into the project tree
+keyword-views:
+	PROJECTS/make-keyword-views.sh
 
 # glimpseindex across the entire system - the current
 #   just indexes the whole directory. You can do individual

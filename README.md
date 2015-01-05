@@ -50,18 +50,18 @@ options but a typical use case would:
 * Part 2 must match line in the file ``components``
 * Part 3 is free text
 
+### A simple symlinked KEYWORD search
+The ``make keyword-views`` command creates a directory
+``VIEWS`` which in turn has subdirectories for each keyword.
+Typically you'd open this up in some file explorer.
+
 ### TODO in order to be bigger than Ben Hur
 
 1. Perhaps add an archive command to archive both the working
 directory and FOSSIL archive away. 
 1. Maybe add in some more templates from the real collection.
-1. Add a searcher/index running across both the ONELINER and the
-project README*
-1. Add a per keyword view of the dataset, i.e. a directory that 
-in turn symlinks to a subset of the data.
 1. Finally develop this as a startup company version of TRIM which
 is an outrageously complicated bit of work (TRIM i.e.)
-1. Add in a glimpseindex (in the Makefile currently)
 
 
 
