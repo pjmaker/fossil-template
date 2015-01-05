@@ -21,7 +21,7 @@ rm:
 # ptx - generate the complete keyword in context list
 #  from the ONELINER file in each project. 
 ptx:
-	find . -name ONELINER -exec cat {} \; | \
+	find . -name ONELINER -o -name KEYWORDS -exec cat {} \; | \
 	ptx --ignore-file=PROJECTS/INDEX-STOPLIST \
 	   --ignore-case --width=80 >INDEX
 

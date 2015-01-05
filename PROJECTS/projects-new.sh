@@ -72,18 +72,21 @@ do
 	cp $t .
     fi
 done
-if [ ! -d ${PROJECT} ] 
-then
-   mkdir ${PROJECT}
-fi
 
 # get the one line summary from the user
 echo -n "One liner: ${PROJECT} - "
 read ONELINER
-echo "${PROJECT} - ${ONELINER}" > $PROJECT/ONELINER
+echo "${PROJECT} - ${ONELINER}" > ONELINER
 
-# make the ptx
-make ptx
+# get any extra keywords for the project from the user
+KEYWORDS=$(echo ${PROJECT} ${ONELINER} | sed -e 's/[-_:]/ /g')
+echo "Keywords/Categories: ${KEYWORDS}"
+echo -n "Extra Keywords/Categories: "
+read EXTRAKEYWORDS
+echo "${PROJECT} -  $KEYWORDS $EXTRAKEYWORDS" >KEYWORDS
+
+# make the ptx for all projects
+(cd .. ; make ptx)
 
 # finally do the first commit and setup the fossil project 
 # propeties
